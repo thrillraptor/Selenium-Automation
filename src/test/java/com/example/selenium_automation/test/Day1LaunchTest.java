@@ -1,17 +1,19 @@
-package com.example.selenium_automation.app.selenium;
+package com.example.selenium_automation.test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SeleniumManager {
+import org.junit.jupiter.api.Test;
 
-    public void runAmazonTest() {
+public class Day1LaunchTest {
+    @Test
+    public void LaunchTest() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://amazon.com");
-        System.out.println("Title: " + driver.getTitle());
+        System.out.println(driver.getTitle());
 
         driver.quit();
     }
