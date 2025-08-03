@@ -20,13 +20,13 @@ public class Day11EcommerceTest {
 
     @Test(priority = 1)
     @Parameters({"category"})
-    public void ecommerceHomeSuite(String category) {
+    public void ecommerceHomeSuite(@Optional("Men's Outerwear") String category) {
         new ShopHomePage().tabSelection(category);
     }
 
     @Test(priority = 2)
     @Parameters({"product"})
-    public void ecommerceListSuite(String product) {
+    public void ecommerceListSuite(@Optional("Men's Voyage Fleece Jacket") String product) {
         new ShopListPage().productSelection(product);
     }
 
@@ -46,6 +46,6 @@ public class Day11EcommerceTest {
 
     @AfterClass
     public void tearDown() {
-        driver.quit();
+        DriverFactory.quitDriver();
     }
 }
