@@ -1,8 +1,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Default Suite">
-    <test name="Day5LoginTest">
+<suite name="EcommerceSuite">
+    <test name="CheckOutTest">
+        <parameter name="category" value="Men's Outerwear" />
+        <parameter name="product" value="Men's Voyage Fleece Jacket" />
         <classes>
-            <class name="com.example.selenium_automation.test.Day5LoginTest" />
+            <class name="com.example.selenium_automation.test.Day11EcommerceTest" />
         </classes>
     </test>
 </suite>
